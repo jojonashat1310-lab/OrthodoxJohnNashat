@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /server/
+Allow: /
+
+Sitemap: https://OrthodoxJohnNashat.github.io/OrthodoxJohnNashat/sitemap.xml

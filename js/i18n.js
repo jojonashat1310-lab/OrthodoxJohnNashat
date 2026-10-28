@@ -113,10 +113,10 @@ export function initLanguage() {
 const en = {
   meta: {
     description:
-      "Orthodox John Nashat is a digital home for the Orthodox Christian faith: Scripture, the saints, the sacraments, feasts and fasting, and church history. Founded and managed by Servant John Nashat.",
-    ogTitle: "Orthodox John Nashat — A Home for Holy Questions",
+      "An Orthodox Christian website featuring Bible reading, saints, Christian teachings, church history, educational resources, and accessible reading tools.",
+    ogTitle: "Orthodox John Nashat",
     ogDescription:
-      "Explore Orthodox Christianity through Scripture, the saints, the sacraments, feasts and fasting, and church history.",
+      "An Orthodox Christian website featuring Bible reading, saints, Christian teachings, church history, educational resources, and accessible reading tools.",
   },
   skip: "Skip to content",
   brandHome: "Orthodox John Nashat — home",
@@ -244,7 +244,7 @@ const en = {
     chapterRangeNote: "Opening the full chapter…",
   },
   titles: {
-    home: "Orthodox John Nashat — A Home for Holy Questions",
+    home: "Orthodox John Nashat",
     faith: "The Faith — Orthodox John Nashat",
     bible: "Holy Bible — Orthodox John Nashat",
     saints: "Lives of the Saints — Orthodox John Nashat",
@@ -570,10 +570,10 @@ const en = {
 const ar = {
   meta: {
     description:
-      "أرثوذكسية جون نشأت بيت رقمي للإيمان المسيحي الأرثوذكسي: الكتاب المقدس، والقديسون، والأسرار، والمواسم والأصوام، وتاريخ الكنيسة. أسَّسه ويديره الخادم جون نشأت.",
-    ogTitle: "أرثوذكسية جون نشأت — بيت للأسئلة المقدسة",
+      "موقع مسيحي أرثوذكسي يقدّم قراءة الكتاب المقدس، وسير القديسين، والتعاليم المسيحية، وتاريخ الكنيسة، ومصادر تعليمية، وأدوات قراءة سهلة الوصول.",
+    ogTitle: "أرثوذكسية جون نشأت",
     ogDescription:
-      "اكتشف المسيحية الأرثوذكسية من خلال الكتاب المقدس والقديسين والأسرار والمواسم والأصوام وتاريخ الكنيسة.",
+      "موقع مسيحي أرثوذكسي يقدّم قراءة الكتاب المقدس، وسير القديسين، والتعاليم المسيحية، وتاريخ الكنيسة، ومصادر تعليمية، وأدوات قراءة سهلة الوصول.",
   },
   skip: "تخطَّ إلى المحتوى",
   brandHome: "أرثوذكسية جون نشأت — الرئيسية",
@@ -705,7 +705,7 @@ const ar = {
     chapterRangeNote: "جارٍ فتح الفصل كاملًا…",
   },
   titles: {
-    home: "أرثوذكسية جون نشأت — بيت للأسئلة المقدسة",
+    home: "أرثوذكسية جون نشأت",
     faith: "الإيمان — أرثوذكسية جون نشأت",
     bible: "الكتاب المقدس — أرثوذكسية جون نشأت",
     saints: "سير القديسين — أرثوذكسية جون نشأت",

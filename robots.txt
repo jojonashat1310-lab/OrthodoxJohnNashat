@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://OrthodoxJohnNashat.github.io/OrthodoxJohnNashat/sitemap.xml
+Sitemap: https://jojonashat1310-lab.github.io/OrthodoxJohnNashat/sitemap.xml

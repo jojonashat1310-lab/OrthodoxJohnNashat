@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Orthodox John Nashat — A Home for Holy Questions</title>
+  <meta name="description" content="Orthodox John Nashat is a digital home for the Orthodox Christian faith: Scripture, the saints, the sacraments, feasts and fasting, and church history. Founded and managed by Servant John Nashat." />
+  <meta name="theme-color" content="#f7f1e4" />
+  <meta property="og:title" content="Orthodox John Nashat — A Home for Holy Questions" />
+  <meta property="og:description" content="Explore Orthodox Christianity through Scripture, the saints, the sacraments, feasts and fasting, and church history." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/hero-church.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233c101c'/%3E%3Cpath d='M32 13v38M20 25h24' stroke='%23d9b263' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='13' r='3.4' fill='%23d9b263'/%3E%3Ccircle cx='20' cy='25' r='3.4' fill='%23d9b263'/%3E%3Ccircle cx='44' cy='25' r='3.4' fill='%23d9b263'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet" />
+  <script>
+    // Apply the saved theme before first paint so dark-mode users never see a light flash.
+    (function () {
+      var theme = "light";
+      var raw = null;
+      try {
+        raw = localStorage.getItem("ojn.theme");
+      } catch (e) {}
+      var saved = raw;
+      try {
+        saved = JSON.parse(raw);
+      } catch (e) {}
+      if (saved === "dark" || saved === "light") theme = saved;
+      else if (saved == null && window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
+      document.documentElement.dataset.theme = theme;
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute("content", theme === "dark" ? "#12100c" : "#f7f1e4");
+    })();
+    // Apply the saved language before first paint so Arabic never flashes LTR.
+    (function () {
+      var lang = "en";
+      try {
+        var rawLang = localStorage.getItem("ojn.lang");
+        var savedLang = JSON.parse(rawLang);
+        if (savedLang === "ar") lang = "ar";
+      } catch (e) {}
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      document.documentElement.classList.toggle("lang-ar", lang === "ar");
+    })();
+  </script>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <script type="module" src="js/main.js"></script>
+</head>
+<body data-page="home">
+  <script>
+    // Paint the correct header state on direct deep links before the module loads.
+    (function () {
+      var key = (location.hash.replace(/^#\/?/, "").split("?")[0] || "home").toLowerCase();
+      if (key && key !== "home") document.body.dataset.page = key;
+    })();
+  </script>
+  <a class="skip-link" href="#view" data-i18n="skip">Skip to content</a>
+  <div class="page-grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/" data-i18n-aria="brandHome" aria-label="Orthodox John Nashat — home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-opacity=".38" />
+            <path d="M24 10v28M14 19.5h20" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" />
+            <circle cx="24" cy="10" r="2.5" fill="currentColor" />
+            <circle cx="14" cy="19.5" r="2.5" fill="currentColor" />
+            <circle cx="34" cy="19.5" r="2.5" fill="currentColor" />
+            <circle cx="24" cy="38" r="2.5" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Orthodox</span>
+          <span class="brand-sub">John Nashat</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary" data-i18n-aria="nav.primary">
+        <a href="#/" data-nav="home" data-i18n="nav.home">Home</a>
+        <a href="#/faith" data-nav="faith" data-i18n="nav.faith">The Faith</a>
+        <a href="#/bible" data-nav="bible" data-i18n="nav.bible">Bible</a>
+        <a href="#/saints" data-nav="saints" data-i18n="nav.saints">Saints</a>
+        <a href="#/seasons" data-nav="seasons" data-i18n="nav.seasons">Seasons</a>
+        <a href="#/history" data-nav="history" data-i18n="nav.history">History</a>
+        <a href="#/learn" data-nav="learn" data-i18n="nav.learn">Learn</a>
+        <a href="#/about" data-nav="about" data-i18n="nav.about">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" data-i18n-aria="theme.switchDark" aria-label="Switch to dark theme" data-i18n-title="theme.title" title="Switch theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+        <button class="icon-btn settings-toggle" id="settings-btn" type="button" data-i18n-aria="settings.eyebrow" aria-label="Settings" data-i18n-title="settings.eyebrow" title="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h9M18 7h2M4 17h4M12 17h8"/><circle cx="15.5" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm header-cta" href="#/faith">
+          <span data-i18n="cta.explore">Explore the Faith</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" data-i18n-aria="menu.open" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-lines" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu-sheet">
+      <div class="mobile-menu-head">
+        <span class="eyebrow eyebrow-plain">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M6 9.5h12"/></svg>
+          Orthodox John Nashat
+        </span>
+        <button class="icon-btn" id="menu-close" type="button" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav" aria-label="Mobile" data-i18n-aria="nav.mobile">
+        <a href="#/" data-nav="home"><span>01</span><span class="m-label" data-i18n="nav.home">Home</span></a>
+        <a href="#/faith" data-nav="faith"><span>02</span><span class="m-label" data-i18n="nav.faith">The Faith</span></a>
+        <a href="#/bible" data-nav="bible"><span>03</span><span class="m-label" data-i18n="nav.bible">Bible</span></a>
+        <a href="#/saints" data-nav="saints"><span>04</span><span class="m-label" data-i18n="nav.saints">Saints</span></a>
+        <a href="#/seasons" data-nav="seasons"><span>05</span><span class="m-label" data-i18n="nav.seasons">Seasons</span></a>
+        <a href="#/history" data-nav="history"><span>06</span><span class="m-label" data-i18n="nav.history">History</span></a>
+        <a href="#/learn" data-nav="learn"><span>07</span><span class="m-label" data-i18n="nav.learn">Learn</span></a>
+        <a href="#/about" data-nav="about"><span>08</span><span class="m-label" data-i18n="nav.about">About</span></a>
+      </nav>
+      <div class="mobile-menu-foot">
+        <p class="mobile-menu-note" data-i18n="menu.note">A quiet corner of the internet for the ancient faith of Alexandria.</p>
+        <button class="btn btn-ghost mobile-settings" type="button" id="mobile-settings">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h9M18 7h2M4 17h4M12 17h8"/><circle cx="15.5" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+          <span data-i18n="settings.eyebrow">Settings</span>
+        </button>
+        <a class="btn btn-primary" href="#/faith"><span data-i18n="cta.explore">Explore the Faith</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="view" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="footer-pattern" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 8v32M13 18h22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="24" cy="8" r="2.4" fill="currentColor"/><circle cx="13" cy="18" r="2.4" fill="currentColor"/>
+            <circle cx="35" cy="18" r="2.4" fill="currentColor"/><circle cx="24" cy="40" r="2.4" fill="currentColor"/>
+          </svg>
+        </span>
+        <h3 class="footer-title">Orthodox<br /><em>John Nashat</em></h3>
+        <p data-i18n="footer.about">A digital home for the Orthodox faith — built to help every seeker draw nearer to Christ.</p>
+        <p class="footer-founder"><span data-i18n="footer.founder">Founded &amp; managed by</span> <strong data-i18n="footer.founderName">Servant John Nashat</strong></p>
+      </div>
+      <nav class="footer-col" aria-label="Explore" data-i18n-aria="nav.footerExplore">
+        <h4 data-i18n="nav.footerExplore">Explore</h4>
+        <a href="#/bible" data-i18n="footer.holyBible">Holy Bible</a>
+        <a href="#/saints" data-i18n="footer.saints">Lives of the Saints</a>
+        <a href="#/seasons" data-i18n="footer.seasons">Feasts &amp; Fasting</a>
+      </nav>
+      <nav class="footer-col" aria-label="Learn" data-i18n-aria="nav.footerLearn">
+        <h4 data-i18n="nav.footerLearn">Learn</h4>
+        <a href="#/faith" data-i18n="footer.faith">The Faith</a>
+        <a href="#/learn" data-i18n="footer.lessons">Lessons &amp; Quizzes</a>
+        <a href="#/history" data-i18n="footer.history">Church History</a>
+        <a href="#/about" data-i18n="footer.aboutPlatform">About the Platform</a>
+      </nav>
+      <div class="footer-col footer-note">
+        <h4 data-i18n="footer.word">A word</h4>
+        <blockquote class="footer-quote" data-i18n="footer.quote">“Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.”</blockquote>
+        <cite data-i18n="footer.quoteRef">Matthew 5:16 · KJV</cite>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p class="footer-disclaimer" data-i18n="footer.disclaimer">
+        For spiritual direction and the sacraments, please speak with your father of confession.
+      </p>
+      <p class="footer-copy">© <span id="footer-year">2026</span> <span data-i18n="footer.copy">Orthodox John Nashat</span> · <span class="footer-peace" data-i18n="footer.peace">Peace be with you.</span></p>
+    </div>
+  </footer>
+
+  <div id="modal-root"></div>
+  <div id="toast-region" class="toast-region" role="status" aria-live="polite"></div>
+</body>
+</html>
